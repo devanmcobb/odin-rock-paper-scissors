@@ -6,7 +6,7 @@ const gameGrid = document.getElementById('game')
 gameGrid.append(playerSelectionDisplay, computerSelectionDisplay, resultDisplay)
 
 //Create choices: playerSelection & computerChoice
-const choices = ['rock', 'paper', 'scissors']
+const choices = ['rock 👊🏾', 'paper 🖐🏾', 'scissors ✌🏾']
 let playerSelection
 let computerChoice
 
@@ -36,19 +36,19 @@ for (let i = 0; i < choices.length; i++) {
 //Declare results for winner
 const getResult = () => {
     switch (playerSelection + computerChoice) {
-        case 'scissorspaper':
-        case 'rockscissors':
-        case 'paperrock':
+        case 'scissors ✌🏾paper 🖐🏾':
+        case 'rock 👊🏾scissors ✌🏾':
+        case 'paper 🖐🏾rock 👊🏾':
             resultDisplay.innerHTML = "YOU'VE WON!"
             break
-        case 'paperscissors':
-        case 'scissorsrock':
-        case 'rockpaper':
+        case 'paper 🖐🏾scissors ✌🏾':
+        case 'scissors ✌🏾rock 👊🏾':
+        case 'rock 👊🏾paper 🖐🏾':
             resultDisplay.innerHTML = "YOU'VE LOST!"
             break
-        case 'paperpaper':
-        case 'scissorsscissors':
-        case 'rockrock':
+        case 'paper 🖐🏾paper 🖐🏾':
+        case 'scissors ✌🏾scissors ✌🏾':
+        case 'rock 👊🏾rock 👊🏾':
             resultDisplay.innerHTML = "IT'S A DRAW!"
             break
     }
